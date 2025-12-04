@@ -6,20 +6,11 @@ import {
   CardFooter,
   CardHeader,
 } from '@/components/ui/card';
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog';
 import { type Project } from '@/types/project';
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
-import React, { useState } from 'react';
-
-import ArrowRight from '../svgs/ArrowRight';
+import React from 'react';
 import Github from '../svgs/Github';
-import PlayCircle from '../svgs/PlayCircle';
 import Website from '../svgs/Website';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 
@@ -28,7 +19,6 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const [dialogOpen, setDialogOpen] = useState<boolean>(false);
 
   return (
     <Card className="group h-full w-full overflow-hidden transition-all p-0 border-gray-100 dark:border-gray-800 shadow-none">
